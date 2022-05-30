@@ -12,33 +12,30 @@ public class Visitante {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long idVisitante; //ok
-	private String nomeVisitante; //ok
-	private LocalDate dtNasc;
+	private Long id; 
+	private String nome; 
+	private LocalDate dataNascimento;
 	private Integer cpf;
 	private Integer rg;
 	private String digitoRg;
-	private LocalDate dtCadastro;
+	private LocalDate dataCadastro;
 	private String imagePath;
-
 	
-	public Long getIdVisitante() {
-		return idVisitante;
+	
+	public Long getId() {
+		return id;
 	}
-	public void setIdVisitante(Long idVisitante) {
-		this.idVisitante = idVisitante;
+	public String getNome() {
+		return nome;
 	}
-	public String getNomeVisitante() {
-		return nomeVisitante;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
-	public void setNomeVisitante(String nomeVisitante) {
-		this.nomeVisitante = nomeVisitante;
+	public LocalDate getDataNascimento() {
+		return dataNascimento;
 	}
-	public LocalDate getDtNasc() {
-		return dtNasc;
-	}
-	public void setDtNasc(LocalDate dtNasc) {
-		this.dtNasc = dtNasc;
+	public void setDataNascimento(LocalDate dataNascimento) {
+		this.dataNascimento = dataNascimento;
 	}
 	public Integer getCpf() {
 		return cpf;
@@ -46,38 +43,37 @@ public class Visitante {
 	public void setCpf(Integer cpf) {
 		this.cpf = cpf;
 	}
-	public String getDigitoRg() {
-		return digitoRg;
-	}
-	public void setDigitoRg(String digitoRg) {
-		this.digitoRg = digitoRg;
-	}
-	public LocalDate getDtCadastro() {
-		return dtCadastro;
-	}
-	public void setDtCadastro(LocalDate dtCadastro) {
-		this.dtCadastro = dtCadastro;
-	}
-
-	public String getImagePath() {
-		return imagePath;
-	}
-	public void setImagePath(String imagePath) {
-		this.imagePath = imagePath;
-	}
 	public Integer getRg() {
 		return rg;
 	}
 	public void setRg(Integer rg) {
 		this.rg = rg;
 	}
-	@Override
-	public String toString() {
-		return "Visitante [idVisitante=" + idVisitante + ", nomeVisitante=" + nomeVisitante + ", dtNasc=" + dtNasc
-				+ ", cpf=" + cpf + ", rg=" + rg + ", DigitoRg=" + digitoRg + ", dtCadastro=" + dtCadastro
-				+ ", imagePath=" + imagePath + "]";
+	public String getDigitoRg() {
+		return digitoRg;
+	}
+	public void setDigitoRg(String digitoRg) {
+		this.digitoRg = digitoRg;
+	}
+	public LocalDate getDataCadastro() {
+		return dataCadastro;
+	}
+	public void setDataCadastro(LocalDate dataCadastro) {
+		this.dataCadastro = dataCadastro;
+	}
+	public String getImagePath() {
+		return imagePath;
+	}
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "Visitante [id=" + id + ", nome=" + nome + ", dataNascimento=" + dataNascimento + ", cpf=" + cpf
+				+ ", rg=" + rg + ", digitoRg=" + digitoRg + ", dataCadastro=" + dataCadastro + ", imagePath="
+				+ imagePath + "]";
+	}
+
 	
 }

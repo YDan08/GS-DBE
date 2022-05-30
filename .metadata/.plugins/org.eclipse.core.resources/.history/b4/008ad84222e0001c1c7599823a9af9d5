@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/_template.xhtml">
+	<ui:define name="content">
+		
+		<!-- FORM -->
+		<h:form enctype="multipart/form-data">
+		    <p:messages id="messages" closable="true">
+		    	<p:autoUpdate/>
+		    </p:messages>
+		    
+			<p:card style="width: 25em; margin: 1em auto">
+
+				<f:facet name="title">Visitante</f:facet>
+
+				<div class="ui-fluid">
+					<div class="p-field">
+						<label for="name">Nome do visitante</label>
+						<p:inputText 
+							value="#{visitanteBean.visitante.nome}" 
+							id="name" 
+							type="text" 
+							required="true"
+						>
+							<f:ajax event="blur" render="messages" />
+						</p:inputText>
+					</div>
+					
+					<div class="p-field">
+						<label for="birthday">Data de nascimento</label>
+						<p:datePicker
+							value="#{visitanteBean.visitante.dataCadastro}"
+							id="dataNascimento" 
+							required="true"
+							>
+						</p:datePicker>
+					</div>
+					
+					<div class="p-field">
+						<label for="description">Cpf visitante</label>
+						<p:inputNumber
+							value="#{visitanteBean.visitante.cpf}"
+							id="cpf" 
+							type="number"
+							required="true"
+							>
+							<f:ajax event="blur" render="messages" />
+						</p:inputNumber>
+					</div>
+					
+					<div class="p-field">
+						<label for="rg">rg</label>
+						<p:inputNumber
+							value="#{visitanteBean.visitante.rg}"
+							id="rg" 
+							type="number"
+							required="true"
+							>
+							<f:ajax event="blur" render="messages" />
+						</p:inputNumber>
+					</div>
+					
+					<div class="p-field">
+						<label for="description">Digito do RG visitante</label>
+						<p:inputText
+							value="#{visitanteBean.visitante.digitoRg}"
+							id="digitorg" 
+							>
+							<f:ajax event="blur" render="messages" />
+						</p:inputText>
+					</div>
+					
+					<div class="p-field">
+						<label for="birthday">Data de cadastro visitante</label>
+						<p:datePicker
+							value="#{visitanteBean.visitante.dataCadastro}"
+							id="dtCadastro" 
+							>
+						</p:datePicker>
+					</div>
+					
+					
+					
+					<div class="p-field">
+						<label for="image">Image File visit: </label>
+						<p:fileUpload 
+							value="#{visitanteBean.image}" 
+							id="image" 
+							mode="simple" 
+							skinSimple="true"
+						/>
+					</div>
+
+				</div>
+
+				<f:facet name="footer">
+					<p:commandButton action="#{visitanteBean.save()}" icon="pi pi-check"
+						value="Save" />
+					<p:commandButton icon="pi pi-times" value="Cancel"
+						styleClass="ui-button-secondary" style="margin-left: .5em" />
+				</f:facet>
+			</p:card>
+		</h:form>
+
+	</ui:define>
+</ui:composition>
+
+
+
+</html>
