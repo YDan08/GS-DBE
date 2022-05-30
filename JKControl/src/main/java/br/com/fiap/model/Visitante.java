@@ -15,8 +15,8 @@ public class Visitante {
 	private Long id; 
 	private String nome; 
 	private LocalDate dataNascimento;
-	private Integer cpf;
-	private Integer rg;
+	private String cpf;
+	private String rg;
 	private String digitoRg;
 	private LocalDate dataCadastro;
 	private String imagePath;
@@ -37,16 +37,16 @@ public class Visitante {
 	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
-	public Integer getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
-	public void setCpf(Integer cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public Integer getRg() {
+	public String getRg() {
 		return rg;
 	}
-	public void setRg(Integer rg) {
+	public void setRg(String rg) {
 		this.rg = rg;
 	}
 	public String getDigitoRg() {
