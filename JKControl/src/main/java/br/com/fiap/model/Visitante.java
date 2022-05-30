@@ -15,8 +15,8 @@ public class Visitante {
 	private Long id; 
 	private String nome; 
 	private LocalDate dataNascimento;
-	private Integer cpf;
-	private Integer rg;
+	private String cpf;
+	private String rg;
 	private String digitoRg;
 	private LocalDate dataCadastro;
 	private String imagePath;
